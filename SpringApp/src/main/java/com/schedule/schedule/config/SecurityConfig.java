@@ -22,21 +22,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .roles("USER")
                 .build();
 
-        UserDetails user2 = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("user2")
-                .roles("USER")
-                .build();
-
         UserDetails admin = User.withDefaultPasswordEncoder()
                 .username("admin")
                 .password("admin1")
                 .roles("ADMIN")
                 .build();
 
-        return new InMemoryUserDetailsManager(user, user2, admin);
+        return new InMemoryUserDetailsManager(user, admin);
     }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
