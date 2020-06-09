@@ -1,0 +1,30 @@
+<h3>Task Employee</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="task.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="surname" required [(ngModel)]="task.surname" name="surname">
+    </div>
+
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="freeDays" required [(ngModel)]="task.freeDays" name="freeDays">
+    </div>
+
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="shiftHours" required [(ngModel)]="task.shiftHours" name="shiftHours">
+    </div>
+
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="holiday" required [(ngModel)]="task.holiday" name="holiday">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

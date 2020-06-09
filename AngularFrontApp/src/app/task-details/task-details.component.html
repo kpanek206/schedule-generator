@@ -1,0 +1,24 @@
+<h2>Task Details</h2>
+
+<hr/>
+<div *ngIf="task">
+  <div>
+    <label><b>Name: </b></label> {{task.name}}
+  </div>
+  <div>
+    <label><b>Surname: </b></label> {{task.surname}}
+  </div>
+  <div>
+    <label><b>Free Days: </b></label> {{task.freeDays}}
+  </div>
+  <div>
+    <label><b>Shift Hours: </b></label> {{task.shiftHours}}
+  </div>
+  <div>
+    <label><b>Holiday: </b></label> {{task.holiday}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to task List</button><br>

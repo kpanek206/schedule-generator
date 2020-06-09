@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Task {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     @JsonProperty("id")
     private int taskId;
     @JsonProperty("name")
