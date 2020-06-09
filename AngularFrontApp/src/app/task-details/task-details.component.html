@@ -1,24 +1,24 @@
-<h2>Task Details</h2>
+<h2>Podgląd</h2>
 
 <hr/>
 <div *ngIf="task">
   <div>
-    <label><b>Name: </b></label> {{task.name}}
+    <label><b>Imię: </b></label> {{task.name}}
   </div>
   <div>
-    <label><b>Surname: </b></label> {{task.surname}}
+    <label><b>Nazwisko: </b></label> {{task.surname}}
   </div>
   <div>
-    <label><b>Free Days: </b></label> {{task.freeDays}}
+    <label><b>Dni wolne: </b></label> {{task.freeDays}}
   </div>
   <div>
-    <label><b>Shift Hours: </b></label> {{task.shiftHours}}
+    <label><b>Zmiana: </b></label> {{task.shiftHours}}
   </div>
   <div>
-    <label><b>Holiday: </b></label> {{task.holiday}}
+    <label><b>Urlop: </b></label> {{task.holiday}}
   </div>
 </div>
 
 <br>
 <br>
-<button (click)="list()" class="btn btn-primary">Back to task List</button><br>
+<button (click)="list()" class="btn btn-primary">Powrót do listy</button><br>

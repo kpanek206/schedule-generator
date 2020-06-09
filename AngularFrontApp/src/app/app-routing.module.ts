@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'tasks', pathMatch: 'full' },
   { path: 'tasks', component: TaskListComponent },
   { path: 'add', component: CreateTaskComponent },
-  { path: 'tasks/:taskId', component: UpdateTaskComponent },
-  { path: 'tasks/:taskId', component: TaskDetailsComponent },
+  { path: 'update/:taskId', component: UpdateTaskComponent },
+  { path: 'details/:taskId', component: TaskDetailsComponent },
 ];
 
 @NgModule({

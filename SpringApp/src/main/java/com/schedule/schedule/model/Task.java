@@ -12,7 +12,7 @@ public class Task {
 
     @Id
     @GeneratedValue
-    @JsonProperty("id")
+    @JsonProperty("taskId")
     private int taskId;
     @JsonProperty("name")
     private String name;

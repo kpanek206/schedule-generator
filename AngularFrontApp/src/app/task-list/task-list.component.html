@@ -1,31 +1,28 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h2>Task List</h2>
+    <h2>Lista Preferencji</h2>
   </div>
   <div class="panel-body">
     <table class="table table-striped">
       <thead>
       <tr>
-        <th>ID</th>
-        <th>name</th>
-        <th>surname</th>
-        <th>freeDays</th>
-        <th>shiftHours</th>
-        <th>holiday</th>
-        <th>Actions</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Dni wolne</th>
+        <th>Zmiana</th>
+        <th>Urlop</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let task of tasks | async">
-        <td>{{task.taskId}}</td>
         <td>{{task.name}}</td>
         <td>{{task.surname}}</td>
         <td>{{task.freeDays}}</td>
         <td>{{task.shiftHours}}</td>
         <td>{{task.holiday}}</td>
-        <td><button (click)="deleteTask(task.taskId)" class="btn btn-danger">Delete</button>
-          <button (click)="updateTask(task.taskId)" class="btn btn-info" style="margin-left: 10px">Update</button>
-          <button (click)="taskDetails(task.taskId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        <td><button (click)="deleteTask(task.taskId)" class="btn btn-danger">Usuń</button>
+          <button (click)="updateTask(task.taskId)" class="btn btn-info" style="margin-left: 10px">Zmień</button>
+          <button (click)="taskDetails(task.taskId)" class="btn btn-info" style="margin-left: 10px">Podgląd</button>
         </td>
       </tr>
       </tbody>

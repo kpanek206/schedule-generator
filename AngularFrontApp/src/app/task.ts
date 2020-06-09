@@ -1,7 +1,5 @@
-type integer = bigint;
-
 export class Task {
-  taskId:integer;
+  taskId:number;
   name:String;
   surname:String;
   freeDays:String;
