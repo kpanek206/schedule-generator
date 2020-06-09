@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { User } from "./user";
+import { Router } from "@angular/router";
+import { AuthenticationService } from "./authentication.service";
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Generator Grafiku';
+  currentUser: User;
+
+  constructor(
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) {
+    this.authenticationService.currentUser.subscribe(
+      (response) => (this.currentUser = response)
+    );
+  }
+
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(["/login"]);
+  }
 }
