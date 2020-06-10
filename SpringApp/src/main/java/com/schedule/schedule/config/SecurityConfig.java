@@ -1,4 +1,4 @@
-/*
+
 package com.schedule.schedule.config;
 
 
@@ -51,4 +51,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
     }
 }
-*/
+

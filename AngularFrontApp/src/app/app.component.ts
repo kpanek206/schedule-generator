@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { User } from "./user";
-import { Router } from "@angular/router";
-import { AuthenticationService } from "./authentication.service";
+import { User } from './user';
+import { Router } from '@angular/router';
+import { AuthenticationService } from './authentication.service';
 
 
 @Component({
@@ -11,10 +11,10 @@ import { AuthenticationService } from "./authentication.service";
 })
 export class AppComponent {
   currentUser: User;
-
+  title = 'generator grafiku';
   constructor(
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
   ) {
     this.authenticationService.currentUser.subscribe(
       (response) => (this.currentUser = response)
@@ -23,6 +23,6 @@ export class AppComponent {
 
   logout() {
     this.authenticationService.logout();
-    this.router.navigate(["/login"]);
+    this.router.navigate(['/login']);
   }
 }
