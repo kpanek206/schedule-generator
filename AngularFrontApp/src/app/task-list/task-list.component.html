@@ -8,24 +8,27 @@
       <tr>
         <th>Imię</th>
         <th>Nazwisko</th>
-        <th>Dni wolne</th>
-        <th>Zmiana</th>
-        <th>Urlop</th>
+        <th>Min l. godz. pracy</th>
+        <th>Maks l. godz. pracy</th>
+        <th>Początek urlopu</th>
+        <th>Koniec urlopu</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let task of tasks | async">
         <td>{{task.name}}</td>
         <td>{{task.surname}}</td>
-        <td>{{task.freeDays}}</td>
-        <td>{{task.shiftHours}}</td>
-        <td>{{task.holiday}}</td>
+        <td>{{task.min}}</td>
+        <td>{{task.max}}</td>
+        <td>{{task.start}}</td>
+        <td>{{task.end}}</td>
         <td><button (click)="deleteTask(task.taskId)" class="btn btn-danger">Usuń</button>
-          <button (click)="updateTask(task.taskId)" class="btn btn-info" style="margin-left: 10px">Zmień</button>
+          <button (click)="updateTask(task.taskId)" class="btn btn-success" style="margin-left: 10px">Zmień</button>
           <button (click)="taskDetails(task.taskId)" class="btn btn-info" style="margin-left: 10px">Podgląd</button>
         </td>
       </tr>
       </tbody>
     </table>
   </div>
+  <button type="generate" class="btn btn-success">Generuj grafik</button>
 </div>

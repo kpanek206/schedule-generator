@@ -3,19 +3,25 @@
 <hr/>
 <div *ngIf="task">
   <div>
+    <label><b>ID: </b></label> {{task.taskId}}
+  </div>
+  <div>
     <label><b>Imię: </b></label> {{task.name}}
   </div>
   <div>
     <label><b>Nazwisko: </b></label> {{task.surname}}
   </div>
   <div>
-    <label><b>Dni wolne: </b></label> {{task.freeDays}}
+    <label><b>Min: </b></label> {{task.min}}
   </div>
   <div>
-    <label><b>Zmiana: </b></label> {{task.shiftHours}}
+    <label><b>Max: </b></label> {{task.max}}
   </div>
   <div>
-    <label><b>Urlop: </b></label> {{task.holiday}}
+    <label><b>Początek: </b></label> {{task.start}}
+  </div>
+  <div>
+    <label><b>Koniec: </b></label> {{task.end}}
   </div>
 </div>
 

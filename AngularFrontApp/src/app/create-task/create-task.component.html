@@ -4,30 +4,25 @@
     <div class="form-group">
       <label for="name">Imię</label>
       <input type="text" class="form-control" id="name" required [(ngModel)]="task.name" name="name">
-    </div>
-
-    <div class="form-group">
       <label for="name">Nazwisko</label>
       <input type="text" class="form-control" id="surname" required [(ngModel)]="task.surname" name="surname">
+      <label for="name">Minimalna Liczba Godzin Pracy</label>
+      <input type="text" class="form-control" id="min" required [(ngModel)]="task.min" name="min">
+      <label for="name">Maksymalna Liczba Godzin Pracy</label>
+      <input type="text" class="form-control" id="max" required [(ngModel)]="task.max" name="max">
+      <label for="name">Początek Urlopu</label>
+      <input type="date" class="form-control" th:field="*{start}" id="start" required [(ngModel)]="task.start" name="start">
+      <label for="name">Koniec Urlopu</label>
+      <input type="date" class="form-control" th:field="*{end}" id="end" required [(ngModel)]="task.end" name="end">
     </div>
 
     <div class="form-group">
-      <label for="name">Dni wolne</label>
-      <input type="text" class="form-control" id="freeDays" required [(ngModel)]="task.freeDays" name="freeDays">
+      <label for="taskId">ID</label>
+      <input type="number" class="form-control" id="taskId" required [(ngModel)]="task.taskId" name="taskId">
     </div>
-
-    <div class="form-group">
-      <label for="name">Zmiana</label>
-      <input type="text" class="form-control" id="shiftHours" required [(ngModel)]="task.shiftHours" name="shiftHours">
-    </div>
-
-    <div class="form-group">
-      <label for="name">Urlop</label>
-      <input type="text" class="form-control" id="holiday" required [(ngModel)]="task.holiday" name="holiday">
-    </div>
-
 
     <button type="submit" class="btn btn-success">Zapisz</button>
+
   </form>
 </div>
 

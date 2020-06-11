@@ -1,4 +1,4 @@
-
+/*
 package com.schedule.schedule.config;
 
 
@@ -12,9 +12,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
 
 @Configuration
-@CrossOrigin
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
@@ -35,8 +39,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
+    //@GetMapping("/login")
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
+                .antMatchers(HttpMethod.GET,"/login").permitAll()
                 .antMatchers(HttpMethod.GET,"/tasks").hasAnyRole("USER","ADMIN")
                 .antMatchers(HttpMethod.GET,"/tasks/{taskId}").hasAnyRole("USER","ADMIN")
                 .antMatchers(HttpMethod.POST,"/tasks").hasRole("ADMIN")
@@ -44,11 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE,"/tasks/{taskId}").hasRole("ADMIN")
                 .anyRequest().hasRole("ADMIN")
                 .and()
-                .formLogin().permitAll()
-                .and()
-                .logout().permitAll()
-                .and()
                 .csrf().disable();
     }
 }
-
+*/

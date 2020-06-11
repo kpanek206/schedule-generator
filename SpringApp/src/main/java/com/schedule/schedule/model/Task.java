@@ -18,12 +18,30 @@ public class Task {
     private String name;
     @JsonProperty("surname")
     private String surname;
-    @JsonProperty("freeDays")
-    private String freeDays;
-    @JsonProperty("shiftHours")
-    private String shiftHours;
-    @JsonProperty("holiday")
-    private String holiday;
+    @JsonProperty("min")
+    private String minShiftHours;
+    @JsonProperty("max")
+    private String maxShiftHours;
+    @JsonProperty("start")
+    private String startHoliday;
+    @JsonProperty("end")
+    private String endHoliday;
+
+    public String getMinShiftHours() {
+        return minShiftHours;
+    }
+
+    public void setMinShiftHours(String minShiftHours) {
+        this.minShiftHours = minShiftHours;
+    }
+
+    public String getMaxShiftHours() {
+        return maxShiftHours;
+    }
+
+    public void setMaxShiftHours(String maxShiftHours) {
+        this.maxShiftHours = maxShiftHours;
+    }
 
     public int getTaskId() {
         return taskId;
@@ -47,27 +65,19 @@ public class Task {
         this.surname = surname;
     }
 
-    public String getFreeDays() {
-        return freeDays;
+    public String getStartHoliday() {
+        return startHoliday;
     }
 
-    public void setFreeDays(String freeDays) {
-        this.freeDays = freeDays;
+    public void setStartHoliday(String startHoliday) {
+        this.startHoliday = startHoliday;
     }
 
-    public String getShiftHours() {
-        return shiftHours;
+    public String getEndHoliday() {
+        return endHoliday;
     }
 
-    public void setShiftHours(String shiftHours) {
-        this.shiftHours = shiftHours;
-    }
-
-    public String getHoliday() {
-        return holiday;
-    }
-
-    public void setHoliday(String holiday) {
-        this.holiday = holiday;
+    public void setEndHoliday(String endHoliday) {
+        this.endHoliday = endHoliday;
     }
 }

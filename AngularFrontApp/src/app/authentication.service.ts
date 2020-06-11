@@ -7,6 +7,10 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  private baseUrl = 'http://localhost:9091/login';
+
+
   static getToken(): string {
     console.log(localStorage.getItem('token'));
     return localStorage.getItem('token');    
