@@ -1,4 +1,4 @@
-/*
+
 package com.schedule.schedule.config;
 
 
@@ -12,6 +12,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Configuration
 @CrossOrigin
@@ -34,9 +37,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new InMemoryUserDetailsManager(user, admin);
     }
 
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.cors();
         http.httpBasic().and().authorizeRequests()
+                .antMatchers(HttpMethod.POST,"/login").permitAll()
                 .antMatchers(HttpMethod.GET,"/tasks").hasAnyRole("USER","ADMIN")
                 .antMatchers(HttpMethod.GET,"/tasks/{taskId}").hasAnyRole("USER","ADMIN")
                 .antMatchers(HttpMethod.POST,"/tasks").hasRole("ADMIN")
@@ -44,11 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE,"/tasks/{taskId}").hasRole("ADMIN")
                 .anyRequest().hasRole("ADMIN")
                 .and()
-                .formLogin().permitAll()
-                .and()
-                .logout().permitAll()
-                .and()
                 .csrf().disable();
     }
 }
-*/
+
