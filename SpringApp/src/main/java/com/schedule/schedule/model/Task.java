@@ -23,7 +23,7 @@ public class Task {
     @JsonProperty("freeDays")
     private String freeDays;
     @JsonProperty("shiftHours")
-    private LocalTime shiftHours;
+    private String shiftHours;
     @JsonProperty("holiday")
     private String holiday;
 
@@ -57,12 +57,12 @@ public class Task {
         this.freeDays = freeDays;
     }
 
-    public LocalTime getShiftHours() {
+    public String getShiftHours() {
         return shiftHours;
     }
 
     public void setShiftHours(String shiftHours) {
-        this.shiftHours = LocalTime.parse(shiftHours);
+        this.shiftHours = shiftHours;
     }
 
     public String getHoliday() {

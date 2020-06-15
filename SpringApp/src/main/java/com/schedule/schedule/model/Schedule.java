@@ -9,9 +9,7 @@ import org.optaplanner.core.api.domain.solution.drools.ProblemFactCollectionProp
 import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
 import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
 
-/**
- * CloudBalancingSolution
- */
+
 @PlanningSolution
 public class Schedule {
 

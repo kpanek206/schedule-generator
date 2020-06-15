@@ -15,16 +15,13 @@ import org.optaplanner.core.api.score.stream.ConstraintFactory;
 import org.optaplanner.core.api.score.stream.ConstraintProvider;
 import org.optaplanner.core.api.score.stream.Joiners;
 
-/**
- * CloudBalancingConstraintProvider
- */
+
 public class ScheduleConstraintProvider implements ConstraintProvider {
 
     @Override
     public Constraint[] defineConstraints(ConstraintFactory constraintFactory) {
         return new Constraint[]{
-                pierwsze(constraintFactory)//,
-                //drugie(constraintFactory)
+                pierwsze(constraintFactory)
         };
     }
 
@@ -40,14 +37,6 @@ public class ScheduleConstraintProvider implements ConstraintProvider {
                 .penalize("Konflikt", HardSoftScore.ONE_HARD);
 
     }
-
-    /*private Constraint drugie(ConstraintFactory constraintFactory) {
-        return constraintFactory.from(Shift.class)
-                .join(Task.class,
-                        equal(Shift::getStartTime, Task::getShiftHours))
-                .penalize("Konflikt", HardSoftScore.ONE_SOFT);
-
-    }*/
 
 
 }

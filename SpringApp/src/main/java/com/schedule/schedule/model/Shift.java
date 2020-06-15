@@ -6,9 +6,7 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
-/**
- * Process
- */
+
 @PlanningEntity
 public class Shift {
 
