@@ -1,6 +1,6 @@
 package com.schedule.schedule.api;
 
-import netscape.security.Principal;
+//import netscape.security.Principal;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;

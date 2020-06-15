@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 public class Task {
@@ -21,7 +23,7 @@ public class Task {
     @JsonProperty("freeDays")
     private String freeDays;
     @JsonProperty("shiftHours")
-    private String shiftHours;
+    private LocalTime shiftHours;
     @JsonProperty("holiday")
     private String holiday;
 
@@ -55,12 +57,12 @@ public class Task {
         this.freeDays = freeDays;
     }
 
-    public String getShiftHours() {
+    public LocalTime getShiftHours() {
         return shiftHours;
     }
 
     public void setShiftHours(String shiftHours) {
-        this.shiftHours = shiftHours;
+        this.shiftHours = LocalTime.parse(shiftHours);
     }
 
     public String getHoliday() {

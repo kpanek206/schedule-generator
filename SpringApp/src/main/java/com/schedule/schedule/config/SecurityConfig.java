@@ -48,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST,"/tasks").hasRole("ADMIN")
                 .antMatchers(HttpMethod.PUT,"/tasks/{taskId}").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE,"/tasks/{taskId}").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "//cloud-balancing/solve").hasAnyRole("USER","ADMIN")
                 .anyRequest().hasRole("ADMIN")
                 .and()
                 .csrf().disable();
