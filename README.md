@@ -1,9 +1,9 @@
-#Projekt w ramach kursu Inżynieria e-systemów - technologia Java
+# Projekt w ramach kursu Inżynieria e-systemów - technologia Java
 
-##Cel:
+## Cel:
 Aplikacja umożliwi ustalenie grafiku dla małej firmy (do 10 osób). Użytkownik (np. szef firmy) loguje się do aplikacji i dodaje do niej poszczególnych pracowników. Każdy z nich ma odpowiednie preferencje takie jak: ilość dni wolnych w miesiącu, preferowana godzina zmiany lub planowany dłuższy urlop. Aplikacja generuje dokument  z miesięcznym grafikiem z uwzględnionymi wcześniej wytycznymi.
 
-##Co zostało zrobione:
+## Co zostało zrobione:
 *	Baza danych oraz strona internetowa
 *	Obsługa zapytań REST
 *	Logowanie użytkowników (tylko z poziomu aplikacji Spring)
